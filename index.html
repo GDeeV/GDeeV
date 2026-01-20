@@ -48,14 +48,15 @@
 
         .intro-section {
             margin: 40px 0;
+            display: flex;
+            gap: 30px;
+            align-items: flex-start;
         }
 
         .profile-photo {
-            float: right;
+            flex-shrink: 0;
             width: 200px;
             height: 200px;
-            margin-left: 30px;
-            margin-bottom: 20px;
             background-color: #f0f0f0;
             border: 1px solid #ddd;
             display: flex;
@@ -72,6 +73,7 @@
         }
 
         .intro-text {
+            flex: 1;
             font-size: 1.1em;
         }
 
@@ -139,11 +141,13 @@
         }
 
         @media (max-width: 600px) {
+            .intro-section {
+                flex-direction: column;
+            }
+
             .profile-photo {
-                float: none;
                 width: 150px;
                 height: 150px;
-                margin: 0 auto 20px auto;
             }
 
             body {
